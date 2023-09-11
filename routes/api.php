@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ProjectController;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +27,7 @@ Route::get('/test', function () {
 });
 
 // Rotta per ricevere lista dei progetti
-Route::get('/projects', function () {
-    $projects = Project::all();
-    return response()->json($projects);
-});
+
+// Route::apiResource('projects', ProjectController::class);
+
+Route::get('/projects', [ProjectController::class, 'index']);
