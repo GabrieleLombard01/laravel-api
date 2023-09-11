@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,4 +23,10 @@ Route::get('/test', function () {
     $names = ['Gabriele', 'Lorenzo', 'Pablo', 'Nicolò'];
     $total = count($names);
     return response()->json(compact('names', 'total'));
+});
+
+// Rotta per ricevere lista dei progetti
+Route::get('/projects', function () {
+    $projects = Project::all();
+    return response()->json($projects);
 });
