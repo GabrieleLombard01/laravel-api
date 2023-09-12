@@ -31,3 +31,6 @@ Route::get('/test', function () {
 // Route::apiResource('projects', ProjectController::class);
 
 Route::get('/projects', [ProjectController::class, 'index']);
+
+// Rotta per ricevere dettaglio di un progetto
+Route::get('projects/{project}', ProjectController::class, 'show');
