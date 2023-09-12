@@ -33,4 +33,4 @@ Route::get('/test', function () {
 Route::get('/projects', [ProjectController::class, 'index']);
 
 // Rotta per ricevere dettaglio di un progetto
-Route::get('projects/{project}', ProjectController::class, 'show');
+Route::get('projects/{project}', [ProjectController::class, 'show']);
