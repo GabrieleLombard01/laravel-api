@@ -9,7 +9,11 @@
 </head>
 
 <body>
-    <h1>E' stato inviato un nuovo messaggio</h1>
+    <div class="container">
+        <h1 class="pt-5 text-center">E' stato inviato un nuovo messaggio</h1>
+        <hr>
+        <p>{{ $content }}</p>
+    </div>
 </body>
 
 </html>
