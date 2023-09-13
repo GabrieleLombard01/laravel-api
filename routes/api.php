@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\ProjectController;
 use App\Models\Project;
 use Illuminate\Http\Request;
@@ -36,5 +37,4 @@ Route::get('/projects', [ProjectController::class, 'index']);
 Route::get('projects/{project}', [ProjectController::class, 'show']);
 
 // Rotta per ricevere un messaggio e inviare una mail
-Route::post('/contact-message', function () {
-});
+Route::post('/contact-message',  [ContactController::class, 'message']);
