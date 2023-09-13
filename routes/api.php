@@ -34,3 +34,7 @@ Route::get('/projects', [ProjectController::class, 'index']);
 
 // Rotta per ricevere dettaglio di un progetto
 Route::get('projects/{project}', [ProjectController::class, 'show']);
+
+// Rotta per ricevere un messaggio e inviare una mail
+Route::post('/contact-message', function () {
+});
